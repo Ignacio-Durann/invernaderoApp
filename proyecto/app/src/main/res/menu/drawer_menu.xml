@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Principal">
+        <menu>
+            <item
+                android:id="@+id/menu_inicio"
+                android:icon="@drawable/ic_databse"
+                android:title="Inicio"/>
+            <item
+                android:id="@+id/sensor_calor"
+                android:icon="@drawable/ic_calor"
+                android:title="Sensor Calor"/>
+            <item
+                android:id="@+id/sen_humedad"
+                android:icon="@drawable/ic_humedad"
+                android:title="Sensor Humedad"/>
+            <item
+                android:id="@+id/sen_movimiento"
+                android:icon="@drawable/ic_movimiento"
+                android:title="Sensor Movimiento"/>
+        </menu>
+    </item>
+
+    <item android:title="Secundario">
+        <menu>
+            <item
+                android:id="@+id/sen_puerta"
+                android:icon="@drawable/ic_puerta"
+                android:title="Estado de la Puerta">
+            </item>
+        </menu>
+    </item>
+
+</menu>
