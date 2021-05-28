@@ -65,7 +65,6 @@ public class puertaFragment extends Fragment {
         try {
             String url = Uri.parse(conecxion.URL + "sensorp.php")
                     .buildUpon()
-                    .appendQueryParameter("valor", "1")
                     .build().toString();
 
             JsonArrayRequest peticion = new JsonArrayRequest(Request.Method.GET, url, null,
@@ -96,7 +95,10 @@ public class puertaFragment extends Fragment {
     private void respuetaEstado(JSONArray response) {
         //falta condicion
         try{
-            if(response.getString(0).endsWith("1")) {
+	    //otra opcion para la condicion
+            //if(response.getJSONObject(0).getString("valor").compareTo("1")==0)
+            int x = Integer.parseInt(response.getJSONObject(0).getString("valor"));
+            if(x == 1) {
                 tvPuertaMensaje.setText("Puerta Abierta");
             }else{
                 tvPuertaMensaje.setText("Puerta Cerrada");
